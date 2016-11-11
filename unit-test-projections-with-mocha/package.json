@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules\\mocha\\bin\\mocha tests"
+    "test": "node node_modules\\mocha\\bin\\mocha src\\tests"
   },
   "author": "Sergej Popov <sergejpopov@outlook.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "~3.5.0",
     "event-store-projection-testing": "^1.0.0",
-    "mocha": "~e3.1.2"
+    "mocha": "~3.1.2"
   }
 }
