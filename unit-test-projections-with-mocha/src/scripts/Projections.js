@@ -520,4 +520,4 @@ var $projections = {
     };
   }
 };
-$projections;
+module.exports = $projections;
