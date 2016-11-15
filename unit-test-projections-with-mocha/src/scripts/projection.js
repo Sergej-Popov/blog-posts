@@ -1,8 +1,9 @@
 //scrips/projection.js
 
-var fromCategory = fromCategory || require('event-store-projection-testing');
+var fromAll = fromAll || require('event-store-projection-testing').scope.fromAll;
+var emit = emit || require('event-store-projection-testing').scope.emit;
 
-fromCategory()
+fromAll()
   .when({
       '$init': function() {
         return { balance: 0, counter: 0}
@@ -11,7 +12,8 @@ fromCategory()
         state.counter++;
       },
       cashDeposited: function(state, event) {
-        state.balance += event.deposit;
+        state.balance += event.data.deposit;
+        emit('stream-out', 'emittedEvent', {a:1});
       }
     }
   );

@@ -10,5 +10,9 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+# IDE
+.idea
+.vs
+
 # Optional eslint cache
 .eslintcache
